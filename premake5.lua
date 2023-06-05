@@ -26,6 +26,11 @@ project "GLFW"
 		"src/window.c",
 	}
 
+	links 
+	{
+		"Dwmapi.lib"
+	}
+
 	filter "system:linux"
 		pic "On"
 
@@ -75,6 +80,7 @@ project "GLFW"
 
 	filter "system:windows"
 		systemversion "latest"
+		buildoptions "/MT"
 
 		files
 		{
